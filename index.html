@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <title>EcoRide Electric Vehicles,</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-title">
+            <object class="header-logo" data="assets/logo.svg" type="image/svg+xml" > </object>
+            <h2>EcoRide</h2>
+        </div>
+        <ul class="header-nav" id="navMenu">
+            <li>Home</li>
+            <li>Models</li>
+            <li>Benefits</li>
+            <li>Contact</li>
+        </ul>
+        <div class="header-controls">
+            <button class="theme-toggle" id="themeToggle">☀️</button>
+            <span class="header-signup">Signup</span>
+            <div class="hamburger" id="hamburgerMenu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-left-column">
+            <span>Smart EV Transportation</span>
+            <h1>Future Solution For Smart <span>Electric Vehicles</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nulla excepturi sed incidunt id officia asperiores facilis illum quam eveniet.</p>
+            <button class="hero-btn">Explore Models</button>
+        </div>
+        <div class="hero-right-column">
+            <img src="assets/bike.png" alt="EcoRide Bike"/>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <h2>Featured Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="assets/bike-1.png" alt="Bike 1" />
+                <h3>Model X</h3>
+                <p>Top Speed: 45mph<br>Range: 60mi</p>
+                <button class="spec-btn" data-model="Model X" data-specs="Motor: 500W | Battery: 48V 14Ah | Weight: 55lbs | Payload: 250lbs">View Specs</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/bike-2.png" alt="Bike 2" />
+                <h3>Model Y</h3>
+                <p>Top Speed: 65mph<br>Range: 80mi</p>
+                <button class="spec-btn" data-model="Model Y" data-specs="Motor: 750W | Battery: 48V 16Ah | Weight: 60lbs | Payload: 300lbs">View Specs</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/bike-3.png" alt="Bike 3" />
+                <h3>Model Z</h3>
+                <p>Top Speed: 55mph<br>Range: 100mi</p>
+                <button class="spec-btn" data-model="Model Z" data-specs="Motor: 1000W | Battery: 52V 20Ah | Weight: 70lbs | Payload: 350lbs">View Specs</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/bike-4.png" alt="Bike 4" />
+                <h3>Model S</h3>
+                <p>Top Speed: 35mph<br>Range: 40mi</p>
+                <button class="spec-btn" data-model="Model S" data-specs="Motor: 250W | Battery: 36V 10Ah | Weight: 40lbs | Payload: 220lbs">View Specs</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <h2>Why EcoRide?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Sustainability</h3>
+                <p>Zero emissions to protect our planet.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Cost Savings</h3>
+                <p>Save money on gas and maintenance over time.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Performance</h3>
+                <p>Instant torque and smart app connectivity.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Book a Test Ride</h2>
+        <form class="contact-form" id="bookingForm">
+            <div>
+                <input type="text" id="nameInput" placeholder="Your Name" required />
+                <span class="error-message" id="nameError">Name must be at least 3 characters.</span>
+            </div>
+            <div>
+                <input type="email" id="emailInput" placeholder="Your Email" required />
+                <span class="error-message" id="emailError">Please enter a valid email.</span>
+            </div>
+            <div>
+                <select id="modelSelect" required>
+                    <option value="">Select a Model</option>
+                    <option>Model X</option>
+                    <option>Model Y</option>
+                    <option>Model Z</option>
+                    <option>Model S</option>
+                </select>
+            </div>
+            <button type="submit" id="submitBtn">Submit Request</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <p>123 EcoRide St, Innovation City</p>
+            <p>contact@ecoride.com | +1 800 555 1234</p>
+        </div>
+        <div class="footer-social">
+            <p>Facebook | Twitter | Instagram</p>
+        </div>
+    </footer>
+
+    <!-- Specifications Modal -->
+    <div class="modal-overlay" id="specModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h3 id="modalTitle">Model Specs</h3>
+            <p id="modalBody">Specs details go here.</p>
+        </div>
+    </div>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
