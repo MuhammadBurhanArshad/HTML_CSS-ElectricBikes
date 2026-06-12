@@ -53,8 +53,8 @@ body {
     cursor: pointer;
     background-color: #499f17;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
     font-weight: bold;
+    border-radius: 0.25rem;
 }
 
 .hero-section {
@@ -111,6 +111,7 @@ body {
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
     transition: background-color 0.3s;
+    border-radius: 0.25rem;
 }
 
 .hero-btn:hover {
@@ -144,10 +145,11 @@ section h2 {
     min-width: 200px;
     border: 1px solid #2a3b59;
     transition: transform 0.3s, border-color 0.3s; 
+    border-radius: 0.25rem;
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.1);
     border-color: #499f17;
 }
 
@@ -179,6 +181,12 @@ section h2 {
     flex: 1;
     min-width: 250px;
     border-left: 4px solid #499f17;
+    border-radius: 0.25rem;
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: scale(1.1);
 }
 
 .benefit-card h3 {
@@ -190,23 +198,26 @@ section h2 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 400px;
     width: 100%;
+    background-color: #1a2436;
+    padding: 2rem;
+    border: 2px solid #2a3b59;
+    box-sizing: border-box;
 }
 
 .contact-form input,
 .contact-form select {
     padding: 1rem;
-    background-color: #1a2436;
+    background-color: #0f1621;
     border: 1px solid #2a3b59;
     color: aliceblue;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: inherit;
 }
 
 .contact-form input:focus,
 .contact-form select:focus {
     outline: none;
-    border-color: #499f17;
+    border: 2px solid #499f17;
 }
 
 .contact-form button {
@@ -215,10 +226,9 @@ section h2 {
     border: none;
     padding: 1rem;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: inherit;
     font-weight: bold;
     margin-top: 0.5rem;
-    transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
@@ -248,15 +258,16 @@ section h2 {
 
 .theme-toggle {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: inherit;
     background: none;
     border: none;
     color: aliceblue;
-    transition: transform 0.3s;
 }
 
 .theme-toggle:hover {
-    transform: scale(1.1);
+    color: #499f17;
 }
 
 body.light-theme {
@@ -330,22 +341,38 @@ body.light-theme .header-title > h2 {
 .modal-content {
     background-color: #1a2436;
     padding: 2rem;
-    border-radius: 8px;
     max-width: 500px;
     width: 90%;
     position: relative;
-    border: 1px solid #499f17;
+    border: 2px solid #499f17;
     color: aliceblue;
 }
 
 .modal-close {
     position: absolute;
     top: 1rem;
-    right: 1.5rem;
+    right: 1rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    color: white;
+    background-color: #499f17;
+    padding: 0.2rem 0.6rem;
+}
+
+#modalImage {
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin: 1rem 0;
+    display: block;
+}
+
+#modalPrice {
     color: #499f17;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 .contact-form div {

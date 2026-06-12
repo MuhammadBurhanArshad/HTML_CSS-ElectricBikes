@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('light-theme');
         if (document.body.classList.contains('light-theme')) {
-            themeToggle.textContent = '🌙';
+            themeToggle.textContent = 'Dark';
         } else {
-            themeToggle.textContent = '☀️';
+            themeToggle.textContent = 'Light';
         }
     });
 
@@ -20,12 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const specModal = document.getElementById('specModal');
     const closeModal = document.getElementById('closeModal');
     const modalTitle = document.getElementById('modalTitle');
+    const modalImage = document.getElementById('modalImage');
+    const modalPrice = document.getElementById('modalPrice');
     const modalBody = document.getElementById('modalBody');
 
     specButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             modalTitle.textContent = btn.getAttribute('data-model') + " Specifications";
             modalBody.textContent = btn.getAttribute('data-specs');
+            modalImage.src = btn.getAttribute('data-img');
+            modalPrice.textContent = "Price: " + btn.getAttribute('data-price');
             specModal.classList.add('active');
         });
     });
